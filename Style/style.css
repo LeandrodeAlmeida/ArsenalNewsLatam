@@ -1,0 +1,164 @@
+/***Encabezado***/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(226, 15, 26);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+
+
+header h1 {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+
+}
+
+/***Barra de navegacion***/
+nav {
+    background-color: rgb(226, 15, 26);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: end;
+
+}
+
+nav ul li {
+    list-style: none;
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    padding: 0px 20px;
+
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+
+}
+
+
+/***Contenido principal***/
+
+
+main div p {
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+#arsenalTeam img {
+    width: 100%;
+}
+
+#palmaresArsenal img {
+    width: 100%;
+}
+
+
+/***Footer***/
+footer {
+    display: flex;
+    background-color: rgb(226, 15, 26);
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.parrafo {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    color: white;
+    width: 50%;
+    font-style: italic;
+}
+
+.redesClub ul li {
+    list-style: none;
+    display: inline-flex;
+    padding-top: 10px;
+    padding-right: 10px;
+
+
+}
+
+.redesClub {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+
+
+
+}
+
+.nuestraComunidad {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+
+
+}
+
+
+
+
+/***Aplicando grid***/
+
+
+body {
+    display: grid;
+    min-height: 100vh;
+    row-gap: 5px;
+    column-gap: 5px;
+    grid-template-areas:
+        "header    nav      nav"
+        "team    team  palmares"
+        "team    team   palmares"
+        "main main palmares"
+        "pie       pie     pie ";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 75px 150px;
+
+
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+div {
+    grid-area: team;
+}
+
+aside {
+    grid-area: palmares;
+}
+
+footer {
+    grid-area: pie;
+}

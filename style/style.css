@@ -171,23 +171,36 @@ footer {
 /* MOBILE MAX 600PX*/
 
 @media (max-width: 768px) {
-    body{
-    grid-template-areas:
-    "header"
-    "nav"
-    "team"
-    "main"
-    "palmares"
-    "pie";
-grid-template-columns: auto;
-grid-template-rows: 80px auto 1fr 75px 1fr 150px;
+    body {
+        grid-template-areas:
+            "header"
+            "nav"
+            "team"
+            "main"
+            "palmares"
+            "pie";
+        grid-template-columns: auto;
+        grid-template-rows: 80px auto 1fr 75px 1fr auto;
+    }
+
+    nav ul li {
+        list-style: none;
+        font-family: 'Ubuntu', sans-serif;
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        justify-content: center;
+    }
+main {
+    width: auto;
+    padding-top: 2px;
 }
-nav ul li {
-    list-style: none;
-    font-family: 'Ubuntu', sans-serif;
-    display: flex;
-    flex-direction: column;
-
-
+#arsenalTeam img {
+    width: 80%;
 }
 }

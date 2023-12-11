@@ -168,23 +168,26 @@ footer {
     grid-area: pie;
 }
 
-/***MOBILE***/
+/* MOBILE MAX 600PX*/
 
-@media screen (max-width 600px) {
+@media (max-width: 768px) {
+    body{
+    grid-template-areas:
+    "header"
+    "nav"
+    "team"
+    "main"
+    "palmares"
+    "pie";
+grid-template-columns: auto;
+grid-template-rows: 80px auto 1fr 75px 1fr 150px;
+}
+nav ul li {
+    list-style: none;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
 
-    body {
-        display: grid;
-       
-        grid-template-areas:
-            "header "
-            "nav"
-            "team"
-            "main"
-            "palmares"
-            "pie";
-        grid-template-columns: auto;
-        grid-template-rows: 80px 80px 1fr 80px 1fr 150px;
-    
-    
-    }
+
+}
 }

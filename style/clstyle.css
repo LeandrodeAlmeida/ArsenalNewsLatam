@@ -53,24 +53,73 @@ nav ul li a {
 
 }
 
+/***Contenido principal ***/
 
-/***Contenido principal***/
-
-
-main div p {
-    color: rgb(226, 15, 26);
+.titulo {
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.404);
+    color: rgb(226, 15, 26);
+    font-weight: 700;
 }
 
-#arsenalTeam img {
+.textoIntro p {
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(226, 15, 26);
+}
+/***BOX GRUPO***/
+
+
+.faseGrupo h2 {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.faseGrupo img {
     width: 100%;
 }
 
-#palmaresArsenal img {
+
+
+
+/***BOX MAN OF THE MATCH***/
+
+.manMatch h2 {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.manMatch h3 {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.manMatch img {
     width: 100%;
+    border-radius: 50px;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.507);
+}
+
+/***BOX NUMEROS PERSONALES***/
+.numerosPersonales {
+    background-color: gainsboro;
+    border-radius: 50px;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.507);
+}
+
+
+
+.numerosPersonales h2 {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.numerosPersonales h3 {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -122,24 +171,23 @@ footer {
     margin-top: 10px;
 }
 
-
-
 /***Aplicando grid***/
 
 
 body {
     display: grid;
     min-height: 100vh;
-    row-gap: 5px;
-    column-gap: 5px;
+    row-gap: 10px;
+    column-gap: 10px;
     grid-template-areas:
-        "header    nav      nav"
-        "team    team  palmares"
-        "team    team   palmares"
-        "main main palmares"
-        "pie       pie     pie ";
+        "header nav nav"
+        "titulo titulo titulo"
+        "intro intro intro"
+        "manmatch grupo numeros"
+        "pie pie pie";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 80px 1fr 1fr 75px 150px;
+    grid-template-rows: 80px 30px 80px 1fr 150px;
+    
 
 
 }
@@ -152,19 +200,27 @@ nav {
     grid-area: nav;
 }
 
-main {
-    grid-area: main;
+.titulo {
+    grid-area: titulo
 }
 
-div {
-    grid-area: team;
+
+.textoIntro {
+    grid-area: intro;
 }
 
-aside {
-    grid-area: palmares;
+.faseGrupo {
+    grid-area: grupo;
+}
+
+.manMatch {
+    grid-area: manmatch;
+}
+
+.numerosPersonales {
+    grid-area: numeros;
 }
 
 footer {
-    grid-area: pie;
+    grid-area: pie
 }
-

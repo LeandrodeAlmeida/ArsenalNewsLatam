@@ -56,16 +56,30 @@ nav ul li a {
 /***Contenido principal ***/
 
 .titulo {
+    grid-area: titulo;
+    text-align: center;
     font-family: 'Ubuntu', sans-serif;
-    color: rgb(226, 15, 26);
     font-weight: 700;
+    color: rgb(226, 15, 26);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
 }
 
-.textoIntro p {
+ section p {
+    grid-area: intro;
+    text-align: center;
     font-family: 'Ubuntu', sans-serif;
     color: rgb(226, 15, 26);
-}
-/***BOX GRUPO***/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    padding: 10px;
+ } 
+/***BOX GRUPO***/ 
 
 
 .faseGrupo h2 {
@@ -182,11 +196,11 @@ body {
     grid-template-areas:
         "header nav nav"
         "titulo titulo titulo"
-        "intro intro intro"
+        "manmatch intro numeros"
         "manmatch grupo numeros"
         "pie pie pie";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 80px 30px 80px 1fr 150px;
+    grid-template-rows: 80px 30px 1fr 1fr 150px;
     
 
 
@@ -200,14 +214,9 @@ nav {
     grid-area: nav;
 }
 
-.titulo {
-    grid-area: titulo
-}
 
 
-.textoIntro {
-    grid-area: intro;
-}
+
 
 .faseGrupo {
     grid-area: grupo;

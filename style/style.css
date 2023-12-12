@@ -64,8 +64,9 @@ main p {
     font-size: 1rem;
     font-style: italic;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.404);
-display: flex;
-text-justify: auto;
+    display: flex;
+    text-justify: auto;
+    
 }
 
 
@@ -143,7 +144,7 @@ body {
         "main main palmares"
         "pie       pie     pie ";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 80px 1fr 1fr auto 150px;
+    grid-template-rows: 80px auto auto auto 150px;
 
 
 }
@@ -172,11 +173,11 @@ footer {
     grid-area: pie;
 }
 
-/* MOBILE MAX 600PX*/
+/* MOBILE MAX 768PX*/
 
 @media (max-width: 768px) {
     body {
-      
+
         grid-template-areas:
             "header"
             "nav"
@@ -193,7 +194,7 @@ footer {
         font-family: 'Ubuntu', sans-serif;
         display: flex;
         flex-direction: column;
-       
+
     }
 
     nav {
@@ -201,16 +202,19 @@ footer {
         justify-content: space-around;
         justify-content: center;
     }
-main {
-    width: auto;
-    padding-top: 2px;
-}
-#arsenalTeam img {
-    width: 100%;
-}
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
+    main {
+        width: auto;
+        padding-top: 2px;
+    }
+
+    #arsenalTeam img {
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

@@ -49,7 +49,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-weight: 700;
+    font-weight: 500;
 
 }
 
@@ -68,18 +68,53 @@ nav ul li a {
     padding: 10px;
 }
 
- section p {
+
+
+.textoIntro {
     grid-area: intro;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-family: 'Ubuntu', sans-serif;
     color: rgb(226, 15, 26);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/***BOX GRUPO***/
+.faseGrupo {
+    width: 100%;
+    margin: 20px auto;
     padding: 10px;
- } 
-/***BOX GRUPO***/ 
+    text-align: center;
+
+}
+
+.faseGrupo .jugadores {
+    list-style: none;
+    padding: 10px;
+    text-align: left;
+}
+
+.faseGrupo .jugadores li {
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: white;
+    padding: 5px;
+    background-color: rgb(226, 15, 26);
+    border-radius: 50px;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.507);
+}
+
+.faseGrupo .puntos {
+    font-family: 'Ubuntu', sans-serif;
+    float: right;
+    color: white;
+    font-weight: 700;
+    margin-left: 5px;
+}
 
 
 .faseGrupo h2 {
@@ -88,11 +123,11 @@ nav ul li a {
     justify-content: center;
 }
 
-.faseGrupo img {
-    width: 100%;
+.faseGrupo h3 {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
 }
-
-
 
 
 /***BOX MAN OF THE MATCH***/
@@ -116,12 +151,39 @@ nav ul li a {
 }
 
 /***BOX NUMEROS PERSONALES***/
+
 .numerosPersonales {
-    background-color: gainsboro;
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.numerosPersonales .jugadores {
+    list-style: none;
+    padding: 10px;
+    text-align: left;
+}
+
+.numerosPersonales .jugadores li {
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: white;
+    padding: 5px;
+    background-color: rgb(226, 15, 26);
     border-radius: 50px;
     box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.507);
 }
 
+.numerosPersonales .goles {
+    font-family: 'Ubuntu', sans-serif;
+    float: right;
+    color: white;
+    font-weight: 700;
+    margin-left: 5px;
+}
 
 
 .numerosPersonales h2 {
@@ -135,6 +197,11 @@ nav ul li a {
     display: flex;
     justify-content: center;
 }
+
+
+
+
+
 
 
 /***Footer***/
@@ -191,17 +258,17 @@ footer {
 body {
     display: grid;
     min-height: 100vh;
-    row-gap: 10px;
-    column-gap: 10px;
+    row-gap: 20px;
+    column-gap: 5px;
     grid-template-areas:
         "header nav nav"
         "titulo titulo titulo"
-        "manmatch intro numeros"
-        "manmatch grupo numeros"
+        "intro intro intro"
+        "grupo manmatch numeros"
         "pie pie pie";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 80px 30px 1fr 1fr 150px;
-    
+    grid-template-rows: 80px auto auto auto 150px;
+
 
 
 }
@@ -213,10 +280,6 @@ header {
 nav {
     grid-area: nav;
 }
-
-
-
-
 
 .faseGrupo {
     grid-area: grupo;
@@ -232,4 +295,53 @@ nav {
 
 footer {
     grid-area: pie
+}
+
+
+/* Aplicando grid a cl page*/
+
+/* MOBILE MAX 768PX*/
+
+@media (max-width: 768px) {
+
+    body {
+        display: block;
+        overflow-x: hidden;
+    }
+
+    body {
+        width: auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "titulo"
+            "intro"
+            "grupo"
+            "manmatch"
+            "numeros"
+            "pie";
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+    }
+
+    nav ul li {
+        list-style: none;
+        font-family: 'Ubuntu', sans-serif;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        justify-content: center;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

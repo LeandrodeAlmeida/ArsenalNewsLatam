@@ -305,8 +305,9 @@ footer {
 @media (max-width: 768px) {
 
     body {
-        display: block;
+        display: inline-block;
         overflow-x: hidden;
+       
     }
 
     body {
@@ -332,6 +333,7 @@ footer {
 
     }
 
+  
 
     nav {
         display: flex;

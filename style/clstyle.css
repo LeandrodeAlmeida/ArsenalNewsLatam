@@ -258,7 +258,7 @@ footer {
 body {
     display: grid;
     min-height: 100vh;
-    row-gap: 20px;
+    row-gap: 5px;
     column-gap: 5px;
     grid-template-areas:
         "header nav nav"
@@ -304,14 +304,9 @@ footer {
 
 @media (max-width: 768px) {
 
-    body {
-        display: inline-block;
-        overflow-x: hidden;
-       
-    }
+    
 
     body {
-        width: auto;
         grid-template-areas:
             "header"
             "nav"
@@ -346,4 +341,15 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+
+    body div img {
+        max-width: 100%;
+        height: auto;
+    }
+
+  body section img {
+    max-width: 100%;
+    height: auto;
+  }
+
 }

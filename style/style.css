@@ -66,7 +66,7 @@ main p {
     text-shadow: 1px 1px rgba(0, 0, 0, 0.404);
     display: flex;
     text-justify: auto;
-    
+
 }
 
 
@@ -217,4 +217,246 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+}
+
+
+/***cl page***/
+
+/***Contenido principal ***/
+
+.clPageGrid .titulo {
+    grid-area: titulo;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: rgb(226, 15, 26);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+
+
+.clPageGrid .textoIntro {
+    grid-area: intro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(226, 15, 26);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/***BOX GRUPO***/
+.clPageGrid .faseGrupo {
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.clPageGrid .faseGrupo .jugadores {
+    list-style: none;
+    padding: 10px;
+    text-align: left;
+}
+
+.clPageGrid .faseGrupo .jugadores li {
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: white;
+    padding: 5px;
+    background-color: rgb(226, 15, 26);
+    border-radius: 50px;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.507);
+}
+
+.clPageGrid .faseGrupo .puntos {
+    font-family: 'Ubuntu', sans-serif;
+    float: right;
+    color: white;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+
+.clPageGrid .faseGrupo h2 {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.clPageGrid .faseGrupo h3 {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+
+/***BOX MAN OF THE MATCH***/
+
+.clPageGrid .manMatch h2 {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.clPageGrid .manMatch h3 {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.clPageGrid .manMatch img {
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.507);
+}
+
+/***BOX NUMEROS PERSONALES***/
+
+.clPageGrid .numerosPersonales {
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.clPageGrid .numerosPersonales .jugadores {
+    list-style: none;
+    padding: 10px;
+    text-align: left;
+}
+
+.clPageGrid .numerosPersonales .jugadores li {
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: white;
+    padding: 5px;
+    background-color: rgb(226, 15, 26);
+    border-radius: 50px;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.507);
+}
+
+.clPageGrid .numerosPersonales .goles {
+    font-family: 'Ubuntu', sans-serif;
+    float: right;
+    color: white;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.clPageGrid .numerosPersonales h2 {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.clPageGrid .numerosPersonales h3 {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/***grid cl page***/
+
+
+.clPageGrid {
+    display: grid;
+    min-height: 100vh;
+    row-gap: 5px;
+    column-gap: 5px;
+    grid-template-areas:
+        "header nav nav"
+        "titulo titulo titulo"
+        "intro intro intro"
+        "grupo manmatch numeros"
+        "pie pie pie";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px auto auto auto 150px;
+
+
+
+}
+
+
+
+
+
+.clPageGrid .faseGrupo {
+    grid-area: grupo;
+}
+
+.clPageGrid .manMatch {
+    grid-area: manmatch;
+}
+
+.clPageGrid .numerosPersonales {
+    grid-area: numeros;
+}
+
+
+
+/* MOBILE MAX 768PX*/
+
+@media (max-width: 768px) {
+
+
+
+    .clPageGird {
+        grid-template-areas:
+            "header"
+            "nav"
+            "titulo"
+            "intro"
+            "grupo"
+            "manmatch"
+            "numeros"
+            "pie";
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+    }
+
+    nav ul li {
+        list-style: none;
+        font-family: 'Ubuntu', sans-serif;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        justify-content: center;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body div img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    body section img {
+        max-width: 100%;
+        height: auto;
+    }
+
 }

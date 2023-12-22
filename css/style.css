@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+}
+
+.redesClub ul li {
+  list-style: none;
+}
+
+.clPageGrid .numerosPersonales .jugadores {
+  list-style: none;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+header {
+  background-color: rgb(226, 15, 26);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: header;
+}
+header div {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+header h1 {
+  color: white;
+}
+
+nav {
+  background-color: rgb(226, 15, 26);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: end;
+  grid-area: nav;
+}
+nav ul li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+nav ul li a {
+  color: white;
+  font-weight: 500;
+}
+
+footer {
+  display: flex;
+  background-color: rgb(226, 15, 26);
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: pie;
+}
+footer .parrafo {
+  font-weight: 300;
+  color: white;
+  width: 50%;
+  font-style: italic;
+}
+footer .redesClub {
+  color: white;
+}
+footer .redesClub ul li {
+  display: inline-flex;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+footer .nuestraComunidad {
+  color: white;
+  display: inline-block;
+  padding: 10px;
+}
+footer .nuestraComunidad a img {
+  margin-left: 100px;
+  margin-top: 10px;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  row-gap: 5px;
+  column-gap: 5px;
+  grid-template-areas: "header    nav      nav" "team    team  palmares" "team    team   palmares" "main main palmares" "pie       pie     pie ";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 80px auto auto auto 150px;
+}
+
+@media (max-width: 768px) {
+  body {
+    grid-template-areas: "header" "nav" "team" "main" "palmares" "pie";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto 1fr auto;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+  }
+  nav ul li {
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    width: auto;
+    padding-top: 2px;
+  }
+  #arsenalTeam img {
+    width: 100%;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.clPageGrid {
+  display: grid;
+  min-height: 100vh;
+  row-gap: 5px;
+  column-gap: 5px;
+  grid-template-areas: "header nav nav" "titulo titulo titulo" "intro intro intro" "grupo manmatch numeros" "pie pie pie";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 80px auto auto auto 150px;
+}
+
+@media (max-width: 768px) {
+  .clPageGird {
+    grid-template-areas: "header" "nav" "titulo" "intro" "grupo" "manmatch" "numeros" "pie";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+  }
+  nav ul li {
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body div img {
+    max-width: 100%;
+    height: auto;
+  }
+  body section img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+main {
+  grid-area: main;
+}
+main p {
+  color: rgb(226, 15, 26);
+  font-weight: 500;
+  font-size: 1rem;
+  font-style: italic;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.404);
+  display: flex;
+  text-justify: auto;
+}
+
+#arsenalTeam img {
+  width: 100%;
+}
+
+#palmaresArsenal img {
+  width: 100%;
+}
+
+div {
+  grid-area: team;
+}
+
+aside {
+  grid-area: palmares;
+}
+
+.clPageGrid .titulo {
+  grid-area: titulo;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  color: rgb(226, 15, 26);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.clPageGrid .textoIntro {
+  grid-area: intro;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Ubuntu", sans-serif;
+  color: rgb(226, 15, 26);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.clPageGrid .faseGrupo {
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+  grid-area: grupo;
+}
+.clPageGrid .faseGrupo .jugadores {
+  list-style: none;
+  padding: 10px;
+  text-align: left;
+}
+.clPageGrid .faseGrupo .jugadores li {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: white;
+  padding: 5px;
+  background-color: rgb(226, 15, 26);
+  border-radius: 50px;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.507);
+}
+.clPageGrid .faseGrupo .puntos {
+  float: right;
+  color: white;
+  font-weight: 700;
+  margin-left: 5px;
+}
+.clPageGrid .faseGrupo h2 {
+  display: flex;
+  justify-content: center;
+}
+.clPageGrid .faseGrupo h3 {
+  display: flex;
+  justify-content: center;
+}
+.clPageGrid .manMatch {
+  grid-area: manmatch;
+}
+.clPageGrid .manMatch h2 {
+  display: flex;
+  justify-content: center;
+}
+.clPageGrid .manMatch h3 {
+  display: flex;
+  justify-content: center;
+}
+.clPageGrid .manMatch img {
+  width: 100%;
+  border-radius: 50px;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.507);
+}
+.clPageGrid .numerosPersonales {
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+  grid-area: numeros;
+}
+.clPageGrid .numerosPersonales .jugadores {
+  padding: 10px;
+  text-align: left;
+}
+.clPageGrid .numerosPersonales .jugadores li {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: white;
+  padding: 5px;
+  background-color: rgb(226, 15, 26);
+  border-radius: 50px;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.507);
+}
+.clPageGrid .numerosPersonales .goles {
+  float: right;
+  color: white;
+  font-weight: 700;
+  margin-left: 5px;
+}
+.clPageGrid .numerosPersonales h2 {
+  display: flex;
+  justify-content: center;
+}
+.clPageGrid .numerosPersonales h3 {
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+nav {
+    background-color: $color-primario;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: end;
+    grid-area: nav;
+
+
+    ul li {
+        display: inline-block;
+        padding: 0px 20px;
+
+        a {
+
+            color: white;
+            font-weight: 500;
+        }
+
+    }
+
+}

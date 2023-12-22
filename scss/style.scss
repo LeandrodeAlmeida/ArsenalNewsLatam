@@ -1,0 +1,25 @@
+//ABSTRACTS
+@import "abstracts/vars.scss";
+
+//BASE
+@import "base/reset";
+@import "base/typography";
+
+//LAYOUT
+
+@import "layout/header";
+@import "layout/nav";
+@import "layout/footer";
+@import "layout/grid";
+
+//PAGES
+
+@import "pages/home";
+@import "pages/premier";
+@import "pages/cl";
+@import "pages/copas";
+@import "pages/novadades";
+
+
+
+

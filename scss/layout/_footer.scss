@@ -1,0 +1,38 @@
+footer {
+    display: flex;
+    background-color: $color-primario;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: pie;
+
+    .parrafo {
+        font-weight: 300;
+        color: white;
+        width: 50%;
+        font-style: italic;
+    }
+
+    .redesClub {
+        color: white;
+
+        ul li {
+            display: inline-flex;
+            padding-top: 10px;
+            padding-right: 10px;
+        }
+    }
+
+
+
+    .nuestraComunidad {
+        color: white;
+        display: inline-block;
+        padding: 10px;
+
+        a img {
+            margin-left: 100px;
+            margin-top: 10px;
+        }
+    }
+}

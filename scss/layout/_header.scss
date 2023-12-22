@@ -1,0 +1,18 @@
+header {
+    background-color: $color-primario;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+
+    div {
+        display: flex;
+        align-items: center;
+        margin: 5px;
+    }
+
+    h1 {
+        color: white;
+    }
+
+}

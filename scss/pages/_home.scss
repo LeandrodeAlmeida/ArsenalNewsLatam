@@ -1,0 +1,30 @@
+main {
+    grid-area: main;
+
+    p {
+        color: $color-primario;
+        font-weight: 500;
+        font-size: 1rem;
+        font-style: italic;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.404);
+        display: flex;
+        text-justify: auto;
+
+    }
+}
+
+#arsenalTeam img {
+    width: 100%;
+}
+
+#palmaresArsenal img {
+    width: 100%;
+}
+
+div {
+    grid-area: team;
+}
+
+aside {
+    grid-area: palmares;
+}

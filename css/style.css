@@ -195,6 +195,61 @@ aside {
   grid-area: palmares;
 }
 
+.goleadoresPremier {
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+}
+.goleadoresPremier .jugadores {
+  padding: 10px;
+  text-align: left;
+}
+.goleadoresPremier .jugadores li {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: white;
+  padding: 5px;
+  background-color: rgb(226, 15, 26);
+  border-radius: 50px;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.507);
+}
+.goleadoresPremier .goles {
+  float: right;
+  color: white;
+  font-weight: 700;
+  margin-left: 5px;
+}
+.goleadoresPremier h2 {
+  display: flex;
+  justify-content: center;
+}
+.goleadoresPremier h3 {
+  display: flex;
+  justify-content: center;
+}
+
+.proximosEncuentros {
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+}
+.proximosEncuentros .partidosProx {
+  list-style: none;
+  padding: 10px;
+  text-align: center;
+}
+.proximosEncuentros .partidosProx li {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: white;
+  padding: 5px;
+  background-color: rgb(226, 15, 26);
+  border-radius: 50px;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.507);
+}
+
 .clPageGrid .titulo {
   grid-area: titulo;
   text-align: center;

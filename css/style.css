@@ -166,6 +166,26 @@ body {
     height: auto;
   }
 }
+.novGrid {
+  display: grid;
+  min-height: 100vh;
+  row-gap: 5px;
+  column-gap: 5px;
+  grid-template-areas: "header nav nav" "titulo titulo titulo" "fichajes playermes twitter" "video playermes twitter" "pie pie pie";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 80px auto auto auto 150px;
+}
+
+.plGrid {
+  display: grid;
+  min-height: 100vh;
+  row-gap: 5px;
+  column-gap: 5px;
+  grid-template-areas: "header nav nav" "titulopl titulopl titulopl" "goleadores pltabla pltabla" "encuentros pltabla pltabla" "pie pie pie";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 80px auto auto auto 150px;
+}
+
 main {
   grid-area: main;
 }
@@ -200,6 +220,7 @@ aside {
   margin: 20px auto;
   padding: 10px;
   text-align: center;
+  grid-area: goleadores;
 }
 .goleadoresPremier .jugadores {
   padding: 10px;
@@ -228,12 +249,17 @@ aside {
   display: flex;
   justify-content: center;
 }
+.goleadoresPremier .plTitulo {
+  color: rgb(226, 15, 26);
+  grid-area: titulopl;
+}
 
 .proximosEncuentros {
   width: 100%;
   margin: 20px auto;
   padding: 10px;
   text-align: center;
+  grid-area: encuentros;
 }
 .proximosEncuentros .partidosProx {
   list-style: none;
@@ -246,6 +272,13 @@ aside {
   color: white;
   padding: 5px;
   background-color: rgb(226, 15, 26);
+  border-radius: 50px;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.507);
+}
+.proximosEncuentros .plTabla {
+  grid-area: pltabla;
+}
+.proximosEncuentros .plTabla img {
   border-radius: 50px;
   box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.507);
 }
@@ -355,6 +388,43 @@ aside {
 .clPageGrid .numerosPersonales h3 {
   display: flex;
   justify-content: center;
+}
+
+.novGrid .tituloNov {
+  color: rgb(226, 15, 26);
+  grid-area: titulo;
+  display: flex;
+  justify-content: center;
+}
+.novGrid .jugadorDelMes {
+  justify-items: center;
+  grid-area: playermes;
+}
+.novGrid .jugadorDelMes h2 {
+  display: flex;
+  justify-content: center;
+}
+.novGrid .jugadorDelMes h3 {
+  display: flex;
+  justify-content: center;
+}
+.novGrid .jugadorDelMes img {
+  width: 70%;
+  border-radius: 50px;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.507);
+}
+.novGrid .videoArsenal {
+  grid-area: video;
+}
+.novGrid .videoArsenal h2 {
+  display: flex;
+  justify-content: center;
+}
+.novGrid .arsTwitter {
+  grid-area: twitter;
+}
+.novGrid .fichajes {
+  grid-area: fichajes;
 }
 
 /*# sourceMappingURL=style.css.map */

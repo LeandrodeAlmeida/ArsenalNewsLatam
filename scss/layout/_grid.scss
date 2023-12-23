@@ -129,3 +129,41 @@ body {
         }
     
 }
+
+//Novedades
+
+.novGrid {
+display: grid;
+
+min-height: 100vh;
+    row-gap: 5px;
+    column-gap: 5px;
+    grid-template-areas:
+        "header nav nav"
+        "titulo titulo titulo"
+        "fichajes playermes twitter"
+        "video playermes twitter"
+        "pie pie pie";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px auto auto auto 150px;
+
+}
+
+//PREMIER LEAGUE
+
+.plGrid {
+display: grid;
+
+min-height: 100vh;
+    row-gap: 5px;
+    column-gap: 5px;
+    grid-template-areas:
+        "header nav nav"
+        "titulopl titulopl titulopl"
+        "goleadores pltabla pltabla"
+        "encuentros pltabla pltabla"
+        "pie pie pie";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px auto auto auto 150px;
+
+}

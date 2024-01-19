@@ -200,12 +200,22 @@ body {
     align-items: center;
   }
   .novGrid .videoArsenal {
-    width: auto;
-    height: auto;
+    width: 100%;
   }
   .novGrid .arsTwitter {
-    width: auto;
-    height: auto;
+    width: 100%;
+  }
+  .novGrid nav {
+    width: 100%;
+  }
+  .novGrid .tituloNov {
+    width: 100%;
+  }
+  .novGrid .jugadorDelMes {
+    width: 100%;
+  }
+  .novGrid .fichajes {
+    width: 100%;
   }
 }
 .plGrid {
